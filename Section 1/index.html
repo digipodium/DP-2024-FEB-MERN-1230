@@ -26,7 +26,8 @@
         }
 
         header {
-            background-image: url('https://static.vecteezy.com/system/resources/previews/003/623/626/non_2x/sunset-lake-landscape-illustration-free-vector.jpg');
+            background-image: linear-gradient(0deg, #00000090, #0000008a), url('https://static.vecteezy.com/system/resources/previews/003/623/626/non_2x/sunset-lake-landscape-illustration-free-vector.jpg');
+            
             height: 70vh;
             background-size: cover;
             color: white;
@@ -83,6 +84,67 @@
             color: white;
             box-shadow: #ffffff1a 0px 1px 1px 0px inset, #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px;
         }
+
+        .section-contact{
+            padding: 50px 300px;
+        }
+
+        .text-input, .text-input-area {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .text-input-area{
+            resize: vertical;
+        }
+
+        .contact-btn{
+            padding: 10px 20px;
+            border: none;
+            background-color: var(--theme-color);
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .contact-form{
+            /* border: 2px solid red; */
+        }
+
+        footer{
+            background-color: #bbb;
+            padding: 50px 300px;
+            font-family: Roboto;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+
+        .footer-title{
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .social-link{
+            color: #000;
+            text-decoration: none;
+        }
+
+
+        .form-container{
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+        }
+
+        .form-img{
+            background-image: url('https://img.freepik.com/free-vector/contact-us-concept-illustration_114360-2299.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -95,13 +157,15 @@
 
 
     <header>
-        <h1 class="hero-title" style="text-align: center;">Welcome to my website</h1>
-
-        <p class="hero-subtitle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti veritatis accusantium obcaecati ab error
-            ipsum illo enim nam officiis delectus natus nobis nisi, aperiam nihil molestias. Commodi obcaecati molestiae
-            accusantium!
-        </p>
+        <!-- <div style="backdrop-filter: blur(10px);"> -->
+            <h1 class="hero-title" style="text-align: center;">Welcome to my website</h1>
+            
+            <p class="hero-subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti veritatis accusantium obcaecati ab error
+                ipsum illo enim nam officiis delectus natus nobis nisi, aperiam nihil molestias. Commodi obcaecati molestiae
+                accusantium!
+            </p>
+        <!-- </div> -->
 
     </header>
 
@@ -140,11 +204,91 @@
             <video src="video.mp4" autoplay muted loop></video>
         </section>
 
+        <section class="section-contact">
+
+            <h2 class="section-title">Contact Us</h2>
+
+            <div class="form-container">
+                <div class="form-img">
+    
+                </div>
+
+                <form class="contact-form">
+    
+                    <label>Name</label>
+                    <input class="text-input" type="text">
+    
+                    <label>Email Address</label>
+                    <input class="text-input" type="email">
+    
+                    <label>Contact No.</label>
+                    <input class="text-input" type="text">
+    
+                    <label>Message</label>
+                    <textarea class="text-input-area" rows="5"></textarea>
+    
+                    <button class="contact-btn">Submit</button>
+    
+                </form>
+            </div>
+            
+
+
+
+        </section>
+
     </main>
 
 
     <footer>
 
+        <div>
+            <h3 class="footer-title">My Website Name</h3>
+            <p>&copy; 2024 Website Name</p>
+        </div>
+
+        <div>
+            <h4>Find us at :</h4>
+
+            <p>
+                <i class="fa-brands fa-facebook"></i>
+                <a href="#" class="social-link">Facebook</a>
+            </p>
+            <p>
+                <i class="fa-brands fa-square-instagram"></i>
+                <a href="#" class="social-link">Instagram</a>
+            </p>
+            <p>
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="#" class="social-link">Linkedin</a>
+            </p>
+            <p>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <a href="#" class="social-link">X (Twitter)</a>
+            </p>
+
+        </div>
+        <div>
+            <h4>Find us at :</h4>
+
+            <p>
+                <i class="fa-brands fa-facebook"></i>
+                <a href="#" class="social-link">Facebook</a>
+            </p>
+            <p>
+                <i class="fa-brands fa-square-instagram"></i>
+                <a href="#" class="social-link">Instagram</a>
+            </p>
+            <p>
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="#" class="social-link">Linkedin</a>
+            </p>
+            <p>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <a href="#" class="social-link">X (Twitter)</a>
+            </p>
+
+        </div>
     </footer>
 
 </body>
