@@ -1,4 +1,4 @@
-const nums = [ 3, 5, 8, 12, 6, 2 ];
+const nums = [ 3, 5, 8, 12, 6, 7, 9 ];
 
 
 const newArr = [];
@@ -33,34 +33,29 @@ const names = [ 'Raju Rastogi', 'Farhan Akhtar', 'Kaliya Singh' ];
 
 console.log( 'Anand Yadav'.split(' ')[0] );
 
-const nums2 = [4, 87, 26, 284, 270, 963];
-
-const oddNums = nums2.filter( ( n ) => { return n%2!==0 } );
+const oddNums = nums.filter( (n) => { return n%2!==0 } );
 console.log(oddNums);
 
-const prices2 = [12000, 670, 4500, 3500, 4600, 240];
+const prices2 = [ 740, 920, 1450, 3500, 6400, 7200, 120 ];
+// less than 5000 and greater than 1000
 
-const budgetPrice = prices2.filter( (p) => { return p>500 && p<4000 });
-
-console.log(budgetPrice);
+const budgetPrices = prices2.filter( (p) => { return p<5000 && p>1000 } );
+console.log(budgetPrices);
 
 const phoneList = [
-    { brand: 'Samsung', model: 'Galaxy s21', price: 56000, color: ['white', 'blue', 'red'] },
+    { brand: 'Samsung', model: 'Galaxy s21', price: 56000, color: ['white', 'black', 'red'] },
     { brand: 'Mi', model: '10 Pro', price: 25000, color: ['silver', 'black'] },
     { brand: 'Vivo', model: 'v7', price: 23000, color: ['grey', 'blue', 'black'] },
     { brand: 'Oppo', model: 'neo 11', price: 35900, color: ['black', 'red'] },
-    { brand: 'Samsung', model: 'J7', price: 17500, color: ['gold', 'black'] }
+    { brand: 'Samsung', model: 'J7', price: 17500, color: ['gold', 'blue'] }
 ];
 
-const budgetPhones = phoneList.filter( ( phone ) => { return phone.price < 30000 } );
-console.log(budgetPhones);
+const nicePhones = phoneList.filter( (phone) => { return phone.price > 30000 } );
+console.log(nicePhones);
 
-const samsungPhones = phoneList.filter( ( phone ) => { return phone.brand === 'Samsung' });
+const samsungPhones = phoneList.filter( (phone) => { return phone.brand === 'Samsung' } );
 console.log(samsungPhones);
-// filter all phones with blue color
 
-console.log( ['a', 'b', 'c'].includes('b') );
-
-const bluePhones = phoneList.filter( (phone) => { return phone.color.includes('blue') } );
-
-console.log(bluePhones);
+console.log( ['a', 'b', 'c'].includes('d') );
+const redPhones = phoneList.filter( (phone) => { return phone.color.includes('red') } );
+console.log(redPhones);
