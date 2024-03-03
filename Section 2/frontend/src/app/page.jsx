@@ -9,7 +9,6 @@ const Home = () => {
       <Link href="/contact">Contact</Link>
       <Link href="/about">About</Link>
       <h1 style={{ color : 'red', fontSize : '3em' }} >My Home Page</h1>
-
       <hr />
       <br />
       <input type="text" />
