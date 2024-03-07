@@ -7,16 +7,11 @@ const TodoList = () => {
 
   const addNewTask = (e) => {
     // console.log(e.code);
-
     if(e.code === 'Enter'){
       console.log(e.target.value);
-
       const obj = {text : e.target.value, completed : false};
-
       setTaskArray([ obj, ...taskArray ]);
-
       e.target.value = '';
-
     }
   }
 
