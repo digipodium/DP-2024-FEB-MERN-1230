@@ -1,5 +1,6 @@
 // import
 const express = require('express');
+const cors = require('cors');
 
 // initialize
 const app = express();
@@ -7,6 +8,13 @@ const app = express();
 const postRouter = require('./routers/postRouter');
 
 // middleware
+
+app.use(cors({
+    origin: ['http://localhost:3000']
+}));
+
+app.use(express.json());
+
 app.use('/post', postRouter);
 
 const port = 5000;

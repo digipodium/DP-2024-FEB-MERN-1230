@@ -1,4 +1,6 @@
+'use client';
 import { useFormik } from 'formik';
+import { enqueueSnackbar } from 'notistack';
 import React from 'react'
 
 const UploadPost = () => {
@@ -12,6 +14,27 @@ const UploadPost = () => {
         },
         onSubmit: (values) => {
             console.log(values);
+
+            // sending request to backend
+            fetch('http://localhost:5000/post/add', {
+                method: 'POST',
+                body: JSON.stringify(values),
+                headers: {
+                    'Content-Type' : 'application/json'
+                }
+            })
+            .then((response) => {
+                console.log(response.status);
+                if(response.status === 200){
+                    enqueueSnackbar('Post uploaded successfully', { variant: 'success' })
+                }else{
+                    enqueueSnackbar('Something went wrong', { variant: 'error' })
+                }
+            }).catch((err) => {
+                console.log(err);
+                enqueueSnackbar('Something went wrong', { variant: 'error' });
+            });
+
         }
     })
 
